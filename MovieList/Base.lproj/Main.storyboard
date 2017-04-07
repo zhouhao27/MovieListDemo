@@ -79,6 +79,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-nq-zf5">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -86,10 +90,13 @@
                             <constraint firstItem="Kjk-b0-V4w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ell-GY-rY1"/>
                             <constraint firstAttribute="trailing" secondItem="Kjk-b0-V4w" secondAttribute="trailing" id="MDu-y6-zN9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kjk-b0-V4w" secondAttribute="bottom" id="Pak-Ie-HRc"/>
+                            <constraint firstItem="BwN-nq-zf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QHo-Fw-w7a"/>
+                            <constraint firstItem="BwN-nq-zf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLG-Hp-iLl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie List" id="sbV-77-Gsj"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="BwN-nq-zf5" id="H15-Iv-KNb"/>
                         <outlet property="tableView" destination="Kjk-b0-V4w" id="Kgm-a7-3EI"/>
                     </connections>
                 </viewController>
@@ -190,24 +197,31 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jBG-9v-2me">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nBs-G2-yNm" firstAttribute="top" secondItem="GyO-ec-Ol3" secondAttribute="bottom" constant="20" id="9e8-fA-QQ8"/>
                             <constraint firstItem="nBs-G2-yNm" firstAttribute="leading" secondItem="Uop-UO-XK1" secondAttribute="leadingMargin" constant="10" id="DLE-IO-TSz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b5L-81-uTH" secondAttribute="trailing" constant="10" id="DeG-k2-Irb"/>
+                            <constraint firstItem="jBG-9v-2me" firstAttribute="centerX" secondItem="Uop-UO-XK1" secondAttribute="centerX" id="H7a-Co-1vL"/>
                             <constraint firstItem="b5L-81-uTH" firstAttribute="leading" secondItem="Uop-UO-XK1" secondAttribute="leadingMargin" constant="10" id="Hto-MF-w3b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rto-hJ-PKL" secondAttribute="trailing" constant="10" id="I4U-J0-WE5"/>
                             <constraint firstItem="Imp-3l-6cY" firstAttribute="top" secondItem="9eg-YP-kAI" secondAttribute="bottom" constant="8" id="PMJ-pD-WhC"/>
                             <constraint firstItem="rto-hJ-PKL" firstAttribute="top" secondItem="b5L-81-uTH" secondAttribute="bottom" constant="10" id="SnP-8t-znj"/>
                             <constraint firstItem="b5L-81-uTH" firstAttribute="top" secondItem="nBs-G2-yNm" secondAttribute="bottom" constant="15" id="TJf-Pb-JOM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nBs-G2-yNm" secondAttribute="trailing" constant="10" id="TvK-rd-zaI"/>
+                            <constraint firstItem="jBG-9v-2me" firstAttribute="centerY" secondItem="Uop-UO-XK1" secondAttribute="centerY" id="Xp1-Nh-yWW"/>
                             <constraint firstItem="9eg-YP-kAI" firstAttribute="top" secondItem="rto-hJ-PKL" secondAttribute="bottom" constant="20" id="axo-qN-956"/>
                             <constraint firstItem="9eg-YP-kAI" firstAttribute="centerX" secondItem="Uop-UO-XK1" secondAttribute="centerX" id="c6D-h3-PiO"/>
                             <constraint firstItem="rto-hJ-PKL" firstAttribute="leading" secondItem="Uop-UO-XK1" secondAttribute="leadingMargin" constant="10" id="s0J-Zm-OiQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="jBG-9v-2me" id="psZ-d1-u8c"/>
                         <outlet property="durationLabel" destination="3BC-xs-Kx7" id="nOP-GG-bYR"/>
                         <outlet property="genresTagView" destination="b5L-81-uTH" id="JBR-ly-d8M"/>
                         <outlet property="languageLabel" destination="DSp-gd-3w5" id="nq9-ri-QZ2"/>

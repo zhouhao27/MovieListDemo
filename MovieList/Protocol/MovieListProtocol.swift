@@ -12,7 +12,6 @@ import PromiseKit
 protocol MovieListViewProtocol: class {
     func showLoading(_ loading: Bool)
     func showError(_ message: String)
-    func showRefresh(_ data: [MovieSummary]?)
     func showMore(_ data: [MovieSummary]?)
 }
 

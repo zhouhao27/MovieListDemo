@@ -22,22 +22,29 @@ class MovieListPresenter: MovieListPresenterProtocol {
     
     func refresh() {
         
-        view.showLoading(true)
         currentPage = 1
+        getList(pageNo: currentPage)
+    }
+    
+    func loadMore() {
         
-        service.getList(pageNo: 1)
-            .then { movieList in
-                self.view.showRefresh(movieList)
+        currentPage += 1
+        getList(pageNo: currentPage)
+    }
+    
+    private func getList(pageNo: Int) {
+        
+        view.showLoading(true)
+
+        service.getList(pageNo: pageNo)
+            .then {
+                movieList in                
+                self.view.showMore(movieList)
             }.always {
                 self.view.showLoading(false)
             }.catch { error in
                 print(error.localizedDescription)
         }
-    }
-    
-    func loadMore() {
-        currentPage += 1
-        
     }
     
 }
