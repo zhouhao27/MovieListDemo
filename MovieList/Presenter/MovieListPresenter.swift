@@ -26,8 +26,7 @@ class MovieListPresenter: MovieListPresenterProtocol {
         getList(pageNo: currentPage)
     }
     
-    func loadMore() {
-        
+    func loadMore() {        
         currentPage += 1
         getList(pageNo: currentPage)
     }
@@ -43,7 +42,7 @@ class MovieListPresenter: MovieListPresenterProtocol {
             }.always {
                 self.view.showLoading(false)
             }.catch { error in
-                print(error.localizedDescription)
+                self.view.showError(error.localizedDescription)
         }
     }
     

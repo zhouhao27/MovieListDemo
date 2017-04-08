@@ -52,3 +52,7 @@ I'm using MVP instead of MVC so that most business logic are moved into Presente
 - Model
 
 Test the Json data parse function (actually this is automatically done by ObjectMapper).
+
+- View Controller
+
+Basically most of the business logic is moved to presenter so that I don't test the view controller. But actually it's also possible to test View controller with a little more effort. For example, I can use Dependency injection to inject the mocked presenter to View Controller.
