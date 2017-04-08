@@ -21,7 +21,7 @@ In order to run the app in real device, need to select correct Team in **General
 
 ## Installation
 
-> git clone  
+> git clone https://github.com/zhouhao27/MovieListDemo.git
 > cd MovieListDemo  
 > pod install  
 
